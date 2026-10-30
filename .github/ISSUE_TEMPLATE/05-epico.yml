@@ -1,0 +1,65 @@
+name: Épico
+description: Registrar uma entrega ampla que será dividida em sub-issues.
+title: "[Épico] "
+type: Épico
+
+body:
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto estratégico
+      description: Qual problema ou objetivo maior este épico atende?
+    validations:
+      required: true
+
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo do épico
+      description: Qual resultado geral deverá ser alcançado?
+    validations:
+      required: true
+
+  - type: textarea
+    id: escopo
+    attributes:
+      label: Escopo geral
+      description: Quais capacidades ou entregas fazem parte deste épico?
+      placeholder: |
+        - Capacidade 1
+        - Capacidade 2
+        - Capacidade 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: fora-escopo
+    attributes:
+      label: Fora do escopo
+      description: Quais entregas relacionadas não fazem parte deste épico?
+    validations:
+      required: false
+
+  - type: textarea
+    id: sucesso
+    attributes:
+      label: Critérios de sucesso
+      description: Como será avaliado o sucesso da entrega?
+      placeholder: |
+        - Indicador ou resultado 1
+        - Indicador ou resultado 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencias
+    attributes:
+      label: Dependências e riscos
+      description: Registre integrações, decisões, equipes ou riscos já conhecidos.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Após a criação, divida o épico em sub-issues e acompanhe o campo **Sub-issues progress**.

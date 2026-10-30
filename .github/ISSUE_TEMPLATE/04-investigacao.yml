@@ -1,0 +1,55 @@
+name: Investigação
+description: Pesquisar uma dúvida técnica, funcional ou de produto.
+title: "[Investigação] "
+type: Investigação
+
+body:
+  - type: textarea
+    id: pergunta
+    attributes:
+      label: Pergunta a ser respondida
+      description: Qual dúvida ou incerteza motivou a investigação?
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Explique por que essa resposta é necessária.
+    validations:
+      required: true
+
+  - type: textarea
+    id: escopo
+    attributes:
+      label: Escopo da investigação
+      description: O que deverá ser analisado ou comparado?
+      placeholder: |
+        - Alternativa A
+        - Alternativa B
+        - Limitações
+        - Custos
+    validations:
+      required: true
+
+  - type: textarea
+    id: resultado
+    attributes:
+      label: Resultado esperado
+      description: Quais entregáveis devem ser produzidos ao final?
+      value: |
+        - Recomendação:
+        - Alternativas avaliadas:
+        - Riscos identificados:
+        - Próximas ações:
+    validations:
+      required: true
+
+  - type: textarea
+    id: referencias
+    attributes:
+      label: Referências iniciais
+      description: Inclua documentos, APIs, tecnologias ou outras issues relacionadas.
+    validations:
+      required: false

@@ -1,0 +1,52 @@
+name: Tarefa
+description: Registrar trabalho técnico, operacional ou de produto.
+title: "[Tarefa] "
+type: Tarefa
+
+body:
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Por que esta tarefa precisa ser realizada?
+    validations:
+      required: true
+
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Qual resultado concreto deve ser produzido?
+    validations:
+      required: true
+
+  - type: textarea
+    id: atividades
+    attributes:
+      label: Atividades previstas
+      description: Liste os principais trabalhos necessários.
+      placeholder: |
+        - [ ] Atividade 1
+        - [ ] Atividade 2
+        - [ ] Atividade 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: aceite
+    attributes:
+      label: Critérios de conclusão
+      description: Como será verificado que a tarefa foi concluída corretamente?
+      placeholder: |
+        - [ ] Resultado validado
+        - [ ] Documentação atualizada
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencias
+    attributes:
+      label: Dependências e observações
+      description: Informe acessos, decisões, outras issues ou recursos necessários.
+    validations:
+      required: false

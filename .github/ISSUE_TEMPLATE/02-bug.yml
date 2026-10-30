@@ -1,0 +1,85 @@
+name: Bug
+description: Registrar um comportamento incorreto ou uma regressão.
+title: "[Bug] "
+type: Bug
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Informe dados suficientes para que outra pessoa consiga reproduzir e validar o problema.
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição do problema
+      description: Explique objetivamente o erro observado.
+      placeholder: Ao realizar..., o sistema...
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamento-atual
+    attributes:
+      label: Comportamento atual
+      description: O que está acontecendo?
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamento-esperado
+    attributes:
+      label: Comportamento esperado
+      description: O que deveria acontecer?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproducao
+    attributes:
+      label: Passos para reprodução
+      description: Descreva a sequência necessária para reproduzir o problema.
+      placeholder: |
+        1. Acessar...
+        2. Selecionar...
+        3. Informar...
+        4. Observar...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ambiente
+    attributes:
+      label: Ambiente
+      options:
+        - Produção
+        - Homologação
+        - Desenvolvimento
+        - Local
+        - Não identificado
+    validations:
+      required: true
+
+  - type: input
+    id: versao
+    attributes:
+      label: Versão ou identificação da entrega
+      description: Informe versão, build, commit ou data aproximada, quando disponível.
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências
+      description: Adicione prints, vídeos, logs ou mensagens de erro. Remova dados sensíveis.
+    validations:
+      required: false
+
+  - type: textarea
+    id: impacto
+    attributes:
+      label: Impacto observado
+      description: Informe quem é afetado e se existe alguma alternativa temporária.
+    validations:
+      required: true
